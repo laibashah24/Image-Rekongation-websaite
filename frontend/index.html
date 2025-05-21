@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
+    <title>Detectify - AWS Rekognition</title>
+  </head>
+
+  <body>
+    <!-- nav -->
+    <div class="main">
+      <header class="navbar">
+        <ul class="nav">
+          <p class="logo"><a href="#">ᴅᴇᴛᴇᴄᴛɪꜰʏ</a></p>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown">
+            <a href="#service" class="dropdown-btn">Services</a>
+            <ul class="dropdown-content">
+              <li><a href="#object-detection">Object Detection</a></li>
+              <li>
+                <a href="#celebrity-recognition">Celebrity Recognition</a>
+              </li>
+              <li><a href="#emotion-detection">Emotion Detection</a></li>
+            </ul>
+          </li>
+          <li><a href="#testimonial">Testimonial</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </header>
+      <div class="hero">
+        <h1>Detectify - Empowering Visual Insights</h1>
+        <p>
+          With Detectify, experience cutting-edge image recognition technology
+          that identifies objects, scenes, and patterns in real-time. Simplify
+          complex visual data and enhance decision-making through intelligent
+          analysis.
+        </p>
+      </div>
+    </div>
+
+    <!-- image upload -->
+    <div class="mainimgupload">
+      <h1>
+        <center>Upload an Image <span>for Detection</span></center>
+      </h1>
+      <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required />
+        <button type="submit">Upload</button>
+      </form>
+      <div id="results"></div>
+    </div>
+
+    <!-- About us -->
+    <div class="mainaboutme" id="about">
+      <div class="image-section">
+        <div class="image-wrapper">
+          <img src="assets/images/aboutme.jfif" alt="about me" />
+        </div>
+      </div>
+      <div class="text-section">
+        <div class="about-title">About Us</div>
+        <div class="main-heading">
+          Welcome to <span class="highlight">Detectify</span>
+        </div>
+        <p class="description">
+          At <b> Detectify</b>, we are revolutionizing how machines interpret
+          visual data. Our advanced image recognition technology leverages AI
+          and machine learning to analyze and identify objects, patterns, and
+          scenes with unparalleled accuracy. From real-time detection to
+          in-depth analysis.
+          <br />
+          Whether it's enhancing security, automating processes, or extracting
+          actionable insights from images, Detectify is here to help you
+          navigate the future of AI-driven visual recognition. Our mission is to
+          make the world more connected, efficient, and visually intelligent.
+        </p>
+        <ul class="features-list">
+          <li><a href="#">Object Detection</a></li>
+          <li><a href="#">Facial Recognition</a></li>
+          <li><a href="#">Image Tagging and Categorization</a></li>
+        </ul>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- services -->
+    <div>
+      <section class="services-section" id="service">
+        <div class="mainservices">
+          <h1 class="services-title">Our Services</h1>
+          <div class="services-grid">
+            <div class="service-item" id="object-detection">
+              <div class="service-image">
+                <img src="assets/images/services1.jpg" alt="Object Detection" />
+              </div>
+              <div class="service-content">
+                <h2 class="service-title">Object Detection</h2>
+                <p class="service-description">
+                  Upload images and detect objects instantly using our advanced
+                  detection system.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-item" id="celebrity-recognition">
+              <div class="service-image">
+                <img
+                  src="assets/images/services2.jpg"
+                  alt="Celebrity Recognition"
+                />
+              </div>
+              <div class="service-content">
+                <h2 class="service-title">Celebrity Recognition</h2>
+                <p class="service-description">
+                  Identify famous personalities in images with our celebrity
+                  recognition service.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-item" id="emotion-detection">
+              <div class="service-image">
+                <img
+                  src="assets/images/services3.jpg"
+                  alt="Emotion Detection"
+                />
+              </div>
+              <div class="service-content">
+                <h2 class="service-title">Emotion Detection</h2>
+                <p class="service-description">
+                  Analyze facial expressions to detect emotions in uploaded
+                  images.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- testimonials -->
+    <section class="testimonial-section" id="testimonial">
+      <h2 class="testimonial-title">Our Clients Say!!!</h2>
+      <div class="testimonial-slider">
+        <div class="slides-wrapper">
+          <button class="nav1 prev" onclick="moveSlide(-1)">&#8592;</button>
+          <div class="slides">
+            <div class="slide">
+              <p>
+                The object detection feature has completely transformed how we
+                handle our image data. It's fast, accurate, and saves us
+                countless hours of manual work. We couldn’t be more pleased with
+                the results.
+              </p>
+              <div class="client-info">
+                <img src="assets/images/testimonial1.jpg" alt="Client 1" />
+                <h3>John Abraham</h3>
+                <p>New York, USA</p>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+            <div class="slide">
+              <p>
+                The celebrity recognition tool is fantastic! It helped our
+                marketing team quickly identify personalities in large media
+                libraries, streamlining our entire process. Truly a remarkable
+                service.
+              </p>
+              <div class="client-info">
+                <img src="assets/images/testimonial2.jpg" alt="Client 2" />
+                <h3>Birbel Fareed</h3>
+                <p>Istanbul, Turkey</p>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+            <div class="slide">
+              <p>
+                We’ve been using their emotion detection software to analyze
+                customer feedback images, and it’s incredibly insightful. The
+                accuracy and speed of the system have greatly enhanced our
+                decision-making.
+              </p>
+              <div class="client-info">
+                <img src="assets/images/testimonial3.jfif" alt="Client 3" />
+                <h3>Halal Fareed</h3>
+                <p>Manchester, UK</p>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+
+            <div class="slide">
+              <p>
+                The object detection feature has completely transformed how we
+                handle our image data. It's fast, accurate, and saves us
+                countless hours of manual work. We couldn’t be more pleased with
+                the results.
+              </p>
+              <div class="client-info">
+                <img src="assets/images/testimonial1.jpg" alt="Client 4" />
+                <h3>John Abraham</h3>
+                <p>New York, USA</p>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+            <div class="slide">
+              <p>
+                The celebrity recognition tool is fantastic! It helped our
+                marketing team quickly identify personalities in large media
+                libraries, streamlining our entire process. Truly a remarkable
+                service.
+              </p>
+              <div class="client-info">
+                <img src="assets/images/testimonial2.jpg" alt="Client 5" />
+                <h3>Birbel Fareed</h3>
+                <p>Istanbul, Turkey</p>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+            <div class="slide">
+              <p>
+                We’ve been using their emotion detection software to analyze
+                customer feedback images, and it’s incredibly insightful. The
+                accuracy and speed of the system have greatly enhanced our
+                decision-making.
+              </p>
+              <div class="client-info">
+                <img src="assets/images/testimonial3.jfif" alt="Client 6" />
+                <h3>Halal Fareed</h3>
+                <p>Manchester, UK</p>
+                <span class="stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          <button class="nav1 next" onclick="moveSlide(1)">&#8594;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact us -->
+    <div class="contactmain" id="contact">
+      <h1 class="contact-title">Contact us</h1>
+      <section class="contact-section">
+        <div class="contact-info">
+          <br /><br />
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <p>
+              Ginnah Colony <br />
+              Faisalabad, Pk
+            </p>
+          </div>
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <p class="label">Mobile</p>
+            <p>+012 345 67890<br />+012 345 67890</p>
+          </div>
+          <div class="contact-item">
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <p class="label">Email</p>
+            <p>info@detectify.com<br />info@detectify.com</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h2>Contact For Any Query</h2>
+          <p>Send us a message</p>
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <input type="text" placeholder="Subject" required />
+            <textarea placeholder="Message" rows="8" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <div>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA
+              </li>
+              <li><i class="fas fa-envelope"></i> info@example.com</li>
+              <li><i class="fas fa-phone"></i> +012 345 67890</li>
+              <li><i class="fas fa-fax"></i> +012 345 67890</li>
+            </ul>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Users</a></li>
+              <li><a href="#">Testimonial</a></li>
+              <li><a href="#">Magazine</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Legal Notice</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <div class="language-selector">
+              <label for="language">Language</label>
+              <select id="language">
+                <option value="english">English</option>
+                <option value="arabic">Arabic</option>
+              </select>
+            </div>
+            <div class="currency-selector">
+              <label for="currency">Currency</label>
+              <select id="currency">
+                <option value="usd">$ USD</option>
+                <option value="euro">€ EUR</option>
+              </select>
+            </div>
+            <div class="payment-icons">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-paypal"></i>
+              <i class="fab fa-cc-discover"></i>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2024 Detectify, All rights reserved. Designed By
+            <span>Laiba Shah</span>.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- script js for slider -->
+    <script>
+      let currentSlideIndex = 0;
+
+      function moveSlide(n) {
+        const slides = document.querySelector(".slides");
+        const totalSlides = slides.children.length;
+        const slide = document.querySelector(".slide"); // Get a single slide to calculate width
+        const slideWidth = slide.offsetWidth; // Dynamically calculate the width of a slide
+
+        // Update the current slide index
+        currentSlideIndex += n;
+
+        // Prevent the index from going out of bounds
+        if (currentSlideIndex > totalSlides - 3) {
+          currentSlideIndex = 0; // Go back to the start
+        } else if (currentSlideIndex < 0) {
+          currentSlideIndex = totalSlides - 3; // Go to the last set of slides
+        }
+
+        // Move the slides container by the appropriate amount
+        slides.style.transform = `translateX(-${
+          currentSlideIndex * slideWidth
+        }px)`;
+      }
+    </script>
+
+    <!-- script -->
+    <script>
+      document
+        .getElementById("upload-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const formData = new FormData(this);
+          fetch("/detect", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              const resultsDiv = document.getElementById("results");
+              let output = "<h2>Detected Objects and Labels:</h2><ul>";
+              data.labels.forEach((label) => {
+                output += `<li>${label.Name}</li>`;
+              });
+              output += "</ul>";
+
+              output += "<h2>Detected Faces and Emotions:</h2><ul>";
+              data.faces.forEach((face) => {
+                output += `<li>Emotion: ${face.Emotions[0].Type}</li>`;
+              });
+              output += "</ul>";
+
+              output += "<h2>Recognized Celebrities:</h2><ul>";
+              data.celebrities.forEach((celebrity) => {
+                output += `<li>${celebrity.Name}</li>`;
+              });
+              output += "</ul>";
+
+              resultsDiv.innerHTML = output;
+            })
+            .catch((error) => console.error("Error:", error));
+        });
+    </script>
+
+  </body>
+</html>
